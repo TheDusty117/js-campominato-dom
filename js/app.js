@@ -39,11 +39,12 @@ document.querySelector('.play-button').addEventListener('click',function(){ // A
     
     grigliaElement.append(cellaElement)
     
-    cellaElement.addEventListener('click', function() { 
+    cellaElement.addEventListener('click', function(event) { 
       cellaElement.style.backgroundColor = 'cornflowerblue'
       console.log(`sono un click ${num}`, typeof cellaElement)
       // console.log(numeroCelle)
       console.log(num)
+      console.log(event.target)
     })
   }
   // FINE CICLO CHE GENERA LE 100 CASELLE --------------------------------------------------------
