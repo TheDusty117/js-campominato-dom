@@ -22,8 +22,8 @@ document.querySelector('.play-button').addEventListener('click',function(){ // A
   grigliaElement.innerHTML = ('') // COMANDO CHE RESETTA IL GIOCO 
   //  RESETTA IL GIOCO AL CLICK DEL PLAY--------------------------------------
 
-  const casellaArr = [] //ARRAY VALORE DELLA CASELLA CHE DEVE ESSERE CONFRONTATO CON ARRAY BOMBE GIU SOTTO A TUTTO
-  console.log(casellaArr)
+  // const casellaArr = [] //ARRAY VALORE DELLA CASELLA CHE DEVE ESSERE CONFRONTATO CON ARRAY BOMBE GIU SOTTO A TUTTO scommenta
+  // console.log(casellaArr)
 
 
   // CICLO CHE GENERA LE 100 CASELLE ------------------------------------------------------
@@ -43,8 +43,7 @@ document.querySelector('.play-button').addEventListener('click',function(){ // A
       cellaElement.style.backgroundColor = 'cornflowerblue'
       console.log(`sono un click ${num}`, typeof cellaElement)
       // console.log(numeroCelle)
-      console.log(typeof num)
-      casellaArr.push(num)
+      console.log(num)
     })
   }
   // FINE CICLO CHE GENERA LE 100 CASELLE --------------------------------------------------------
@@ -71,10 +70,9 @@ grigliaElement.addEventListener('click',function(){ //CON QUESTA FUNZIONE, CREO 
     bombeArr.push(numRandom)  //ogni numero random(da 0 a 100) viene pushato nell'array bombe sopra per 16 volte
   }
   
-  //Object.assign(bombeArr)
-  console.log(bombeArr)  //ORA IL MIO ARRAY DI BOMBE E' UN OGGETTO, POSSO CONFRONTARLO CON cellaElement(anche essa e' un oggetto)
-  console.log();
 
+  console.log(bombeArr)
+  
 })
 
 
