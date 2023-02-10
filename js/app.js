@@ -1,18 +1,18 @@
 console.log('CAMPO MINATO')
 
+// VARIABILI LATOGRIGLIA ,MOLTIPLICATORE PER CREARE CELLE E ELEMENTO DOM GRIGLIA---------------------------
+let latoGriglia = 10
+let numeroCelle = latoGriglia * latoGriglia
+console.log(latoGriglia, numeroCelle)
+
+const grigliaElement = document.querySelector('.griglia') //prendo il primo ed unico div con classe griglia dal DOM
+console.log(grigliaElement)
+// FINE VARIABILI---------------------------------------------------------------------------
 
 
 document.querySelector('.play-button').addEventListener('click',function(){ // AL CLICK DI PLAY BUTTON, SI GENERA GRIGLIA, CASELLE E TUTTO IL RESTO
   
 
-  // VARIABILI LATOGRIGLIA ,MOLTIPLICATORE PER CREARE CELLE E ELEMENTO DOM GRIGLIA---------------------------
-  let latoGriglia = 10
-  let numeroCelle = latoGriglia * latoGriglia
-  console.log(latoGriglia, numeroCelle)
-  
-  const grigliaElement = document.querySelector('.griglia') //prendo il primo ed unico div con classe griglia dal DOM
-  console.log(grigliaElement)
-  // FINE VARIABILI---------------------------------------------------------------------------
 
 
 
@@ -22,7 +22,9 @@ document.querySelector('.play-button').addEventListener('click',function(){ // A
   grigliaElement.innerHTML = ('') // COMANDO CHE RESETTA IL GIOCO 
   //  RESETTA IL GIOCO AL CLICK DEL PLAY--------------------------------------
 
-  
+  const casellaArr = [] //ARRAY VALORE DELLA CASELLA CHE DEVE ESSERE CONFRONTATO CON ARRAY BOMBE GIU SOTTO A TUTTO
+  console.log(casellaArr)
+
 
   // CICLO CHE GENERA LE 100 CASELLE ------------------------------------------------------
   for (let i = 0; i < numeroCelle; i++) {
@@ -37,19 +39,47 @@ document.querySelector('.play-button').addEventListener('click',function(){ // A
     grigliaElement.append(cellaElement)
     
     cellaElement.addEventListener('click', function() { 
-      console.log(`click ${num}`, typeof cellaElement)
       cellaElement.style.backgroundColor = 'cornflowerblue'
-      
+      console.log(`sono un click ${num}`, typeof cellaElement)
+      // console.log(numeroCelle)
+      console.log(typeof num)
+      casellaArr.push(num)
     })
   }
   // FINE CICLO CHE GENERA LE 100 CASELLE --------------------------------------------------------
  
+  
+})
+
+
+
+grigliaElement.addEventListener('click',function(){ //CON QUESTA FUNZIONE, CREO UNA LISTA DI 16 NUMERI al click, questa lista di 16 numeri, se corrispondente al numero casella, SARA' una BOMBA
+
+  //CREARE UN ARRAY DI 16 NUMERI CHE SONO SEMPRE CASUALI (DA 1 A 100) quindi (array= [1,30,22,8,6,13,50,99,35,23.....])
+  
+  //CREO ARRAY VUOTO --------
+  
+  const bombeArr = [] //ARRAY BOMBE RANDOM X 16
+  // console.log(bombeArr)
+  
+  //FACCIO UN CICLO CHE CREA 16 NUMERI CASUALI(da 1 a 100), ed ognuno di loro verra' PUSHATO DENTRO bombeArr che si trova qui su-----------
+  
+  for (let i = 0; i < 16; i++) {
+    const numRandom = Math.floor(Math.random(1)*100+1)
+    // console.log(numRandom)
+    bombeArr.push(numRandom)
+  }
+  
+  Object.assign(bombeArr)
+  console.log(bombeArr)  //ORA IL MIO ARRAY DI BOMBE E' UN OGGETTO, POSSO CONFRONTARLO CON cellaElement(anche essa e' un oggetto)
+  
 
 })
 
 
 
-//CREARE UN ARRAY DI 16 NUMERI CHE SONO SEMPRE CASUALI (DA 1 A 100) quindi (array= [1,30,22,8,6,13,50,99,35,23.....])
 
-//creo array vuoto
-const bombeArr = []
+
+
+
+
