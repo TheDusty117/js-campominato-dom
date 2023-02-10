@@ -44,7 +44,7 @@ document.querySelector('.play-button').addEventListener('click',function(){ // A
       console.log(`sono un click ${num}`, typeof cellaElement)
       // console.log(numeroCelle)
       console.log(num)
-      console.log(event.target)
+      console.log(event.target)// CONSOLE LOG DI EVENTO E IL SUO TARGET
     })
   }
   // FINE CICLO CHE GENERA LE 100 CASELLE --------------------------------------------------------
