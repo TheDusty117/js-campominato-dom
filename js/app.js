@@ -62,12 +62,12 @@ grigliaElement.addEventListener('click',function(){ //CON QUESTA FUNZIONE, CREO 
   const bombeArr = [] //ARRAY BOMBE RANDOM X 16
   // console.log(bombeArr)
   
-  //FACCIO UN CICLO CHE CREA 16 NUMERI CASUALI(da 1 a 100), ed ognuno di loro verra' PUSHATO DENTRO bombeArr che si trova qui su-----------
-  
+
+  //FACCIO UN CICLO CHE CREA 16 NUMERI CASUALI(da 1 a 100), ed ognuno di loro verra' PUSHATO DENTRO bombeArr che si trova qui su----------------
   for (let i = 0; i < 16; i++) {
     const numRandom = Math.floor(Math.random(1)*100+1)
     // console.log(numRandom)
-    bombeArr.push(numRandom)
+    bombeArr.push(numRandom)  //ogni numero random(da 0 a 100) viene pushato nell'array bombe sopra per 16 volte
   }
   
   Object.assign(bombeArr)
