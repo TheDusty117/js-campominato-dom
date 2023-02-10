@@ -5,6 +5,13 @@ console.log('CAMPO MINATO')
 document.querySelector('.play-button').addEventListener('click',function(){ //on click compare la griglia
   
 
+  //APPENA GENERA GRIGLIA E INIZIA IL GIOCO,
+  //1 GENERARE 16 NUMERI CASUALI (BOMBE)
+
+  //2 INSERIRE QUESTI NUMERI A CASO IN UNA DELLE 100 CELLE
+
+  //
+
 
   // VARIABILI LATOGRIGLIA ,MOLTIPLICATORE PER CREARE CELLE E ELEMENTO DOM GRIGLIA---------------------------
   let latoGriglia = 10
@@ -38,7 +45,7 @@ document.querySelector('.play-button').addEventListener('click',function(){ //on
     grigliaElement.append(cellaElement)
     
     cellaElement.addEventListener('click', function() { 
-      console.log(`click ${num}`)
+      console.log(`click ${num}`, typeof cellaElement)
       cellaElement.style.backgroundColor = 'cornflowerblue'
       
     })
@@ -52,7 +59,8 @@ document.querySelector('.play-button').addEventListener('click',function(){ //on
 
 
 
-// FUNZIONI PER FARE REFACTORING E RENDERE CODICE PIU' PARLANTE
+// FUNZIONI PER FARE REFACTORING E RENDERE CODICE PIU' PARLANTE, e soprattutto includere,
+//azione per azione tutto cio' che ho fatto, all'interno di una FUNCTION!
 
 function startGame(){
 
