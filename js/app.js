@@ -44,7 +44,6 @@ document.querySelector('.play-button').addEventListener('click',function(){ // A
   }
   // FINE CICLO CHE GENERA LE 100 CASELLE --------------------------------------------------------
  
-  
 
 })
 
@@ -52,3 +51,5 @@ document.querySelector('.play-button').addEventListener('click',function(){ // A
 
 //CREARE UN ARRAY DI 16 NUMERI CHE SONO SEMPRE CASUALI (DA 1 A 100) quindi (array= [1,30,22,8,6,13,50,99,35,23.....])
 
+//creo array vuoto
+const bombeArr = []
