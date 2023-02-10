@@ -2,16 +2,8 @@ console.log('CAMPO MINATO')
 
 
 
-document.querySelector('.play-button').addEventListener('click',function(){ //on click compare la griglia
+document.querySelector('.play-button').addEventListener('click',function(){ // AL CLICK DI PLAY BUTTON, SI GENERA GRIGLIA, CASELLE E TUTTO IL RESTO
   
-
-  //APPENA GENERA GRIGLIA E INIZIA IL GIOCO,
-  //1 GENERARE 16 NUMERI CASUALI (BOMBE)
-
-  //2 INSERIRE QUESTI NUMERI A CASO IN UNA DELLE 100 CELLE
-
-  //
-
 
   // VARIABILI LATOGRIGLIA ,MOLTIPLICATORE PER CREARE CELLE E ELEMENTO DOM GRIGLIA---------------------------
   let latoGriglia = 10
@@ -58,36 +50,5 @@ document.querySelector('.play-button').addEventListener('click',function(){ //on
 
 
 
+//CREARE UN ARRAY DI 16 NUMERI CHE SONO SEMPRE CASUALI (DA 1 A 100) quindi (array= [1,30,22,8,6,13,50,99,35,23.....])
 
-// FUNZIONI PER FARE REFACTORING E RENDERE CODICE PIU' PARLANTE, e soprattutto includere,
-//azione per azione tutto cio' che ho fatto, all'interno di una FUNCTION!
-
-function startGame(){
-
-}
-
-function resetGame(){
-
-}
-
-function generateGrid(){
-
-}
-
-function onClick(){
-  
-}
-
-
-
-
-
-//TASK     GIORNATA DI OGGI!!!!-------------------------
-
-//1 GENERARE TOT BOMBE
-
-//2 CREARE ARRAY DI BOMBE const bombe = [5,7,6,8,10]
-
-//3 FAR SPAWNARE BOMBE CASUALMENTE DENTRO UNA DELLE 100 CASELLE
-// bombe.include('5')
-//non dobbiamo avere numeri duplicati
