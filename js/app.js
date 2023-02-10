@@ -32,6 +32,7 @@ document.querySelector('.play-button').addEventListener('click',function(){ // A
     console.log(i + 1)
     const cellaElement = document.createElement('div')
     cellaElement.className = 'cella'
+    
     console.log(cellaElement)
     cellaElement.style.width = `calc(100% / ${latoGriglia})`
     cellaElement.innerHTML = num
@@ -70,9 +71,9 @@ grigliaElement.addEventListener('click',function(){ //CON QUESTA FUNZIONE, CREO 
     bombeArr.push(numRandom)  //ogni numero random(da 0 a 100) viene pushato nell'array bombe sopra per 16 volte
   }
   
-  Object.assign(bombeArr)
+  //Object.assign(bombeArr)
   console.log(bombeArr)  //ORA IL MIO ARRAY DI BOMBE E' UN OGGETTO, POSSO CONFRONTARLO CON cellaElement(anche essa e' un oggetto)
-  
+  console.log();
 
 })
 
