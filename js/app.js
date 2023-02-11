@@ -25,7 +25,7 @@ document.querySelector('.play-button').addEventListener('click',function(){ // A
   // const casellaArr = [] //ARRAY VALORE DELLA CASELLA CHE DEVE ESSERE CONFRONTATO CON ARRAY BOMBE GIU SOTTO A TUTTO scommenta
   // console.log(casellaArr)
 
-
+ 
   // CICLO CHE GENERA LE 100 CASELLE ------------------------------------------------------
   for (let i = 0; i < numeroCelle; i++) {
     let num = i + 1 
@@ -41,16 +41,22 @@ document.querySelector('.play-button').addEventListener('click',function(){ // A
     
     cellaElement.addEventListener('click', function(event) { 
       cellaElement.style.backgroundColor = 'cornflowerblue'
-      console.log(bombeArr)
-      console.log(this.innerHTML)
+      // console.log(bombeArr)
+      console.log(this.innerHTML) // con this vedo che prendo il numero nel'HTML e visualizzo in console
     
 
-      let valueNum = parseInt(this.innerHTML)
+      let valueNum = parseInt(this.innerHTML) //dichiaro var, che converte il valore this.innerHTML
       console.log(valueNum)
+      console.log(bombeArr[1])
 
 
-      //CONFRONTARE valueNum CON array di BOMBE
-
+      //CONFRONTARE valueNum CON tutti gli indici in array di BOMBE
+      if (bombeArr.includes(valueNum)){
+        cellaElement.style.backgroundColor = 'red'
+        console.log('bomba!')
+      } else {
+        console.log('salvo!')
+      }
   
     })
   }
@@ -68,12 +74,6 @@ document.querySelector('.play-button').addEventListener('click',function(){ // A
   
   
 })
-
-
-
-
-
-
 
 
 
