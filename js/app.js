@@ -7,6 +7,22 @@ console.log(latoGriglia, numeroCelle)
 
 const grigliaElement = document.querySelector('.griglia') //prendo il primo ed unico div con classe griglia dal DOM
 console.log(grigliaElement)
+
+
+//VARIABILI PUNTEGGIO GIOCATORE
+//TASK creare contatore punti, che ad ogni click sulla casella senza bomba, aggiunga 100 punti al CONTATORE nell' html
+
+//richiamare il contatore dall'html
+let contatorePunti = document.getElementById('score').innerHTML = 0
+
+contatorePunti = 0
+
+console.log(contatorePunti)
+
+let puntiPerClick = 100
+
+
+
 // FINE VARIABILI---------------------------------------------------------------------------
 
 
@@ -53,10 +69,16 @@ document.querySelector('.play-button').addEventListener('click',function(){ // A
       //CONFRONTARE valueNum CON tutti gli indici in array di BOMBE
       if (bombeArr.includes(valueNum)){
         cellaElement.style.backgroundColor = 'red'
-        console.log('bomba!')
+        cellaElement.style.backgroundImage = "url('img/BOMB.webp')"
+        // alert('hai preso una bomba!')
       } else {
         console.log('salvo!')
+        cellaElement.style.backgroundImage = "url('img/salvo.jpg')"
+        contatorePunti += puntiPerClick
+        // console.log(contatorePunti)
+        document.getElementById('score').innerHTML = contatorePunti
       }
+      
   
     })
   }
