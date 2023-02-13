@@ -1,6 +1,8 @@
 console.log('CAMPO MINATO')
 
 // VARIABILI LATOGRIGLIA ,MOLTIPLICATORE PER CREARE CELLE E ELEMENTO DOM GRIGLIA---------------------------
+
+
 let latoGriglia = 10
 let numeroCelle = latoGriglia * latoGriglia
 console.log(latoGriglia, numeroCelle)
@@ -21,7 +23,7 @@ console.log(contatorePunti)
 
 let puntiPerClick = 100
 
-
+let bombaPerdi = grigliaElement.innerHTML = ('')
 
 // FINE VARIABILI---------------------------------------------------------------------------
 
@@ -70,6 +72,7 @@ document.querySelector('.play-button').addEventListener('click',function(){ // A
       if (bombeArr.includes(valueNum)){
         cellaElement.style.backgroundColor = 'red'
         cellaElement.style.backgroundImage = "url('img/BOMB.webp')"
+        document.getElementById('score').innerHTML = 0
         // alert('hai preso una bomba!')
       } else {
         console.log('salvo!')
@@ -96,7 +99,6 @@ document.querySelector('.play-button').addEventListener('click',function(){ // A
   
   
 })
-
 
 
 
